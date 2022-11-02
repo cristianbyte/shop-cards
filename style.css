@@ -1,0 +1,184 @@
+:root{
+    --base: 20vh;
+    --base-color: #181f63;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}  
+/* bakground */
+html{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: slategray;
+    overflow-x: hidden;
+}
+
+/* Card */
+
+.n__{
+    width: calc(var(--base)*2);
+    height: calc(var(--base)*3.6);
+    background:  linear-gradient(10deg, var(--base-color) 0 45.7%, white 46% 100%);
+    border-radius: 2vh;
+    perspective: 400px;
+    box-shadow: 5px 5px 5px 2px #00000033,
+    -5px -5px 5px 2px #ffffff33;
+}
+.n__desing{
+    height: 55%;
+    width: 100%;
+    padding: 0 2%;
+}
+
+.n__logo{
+    width: 100%;
+    height: 2rem;
+    background-image: url('nike.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.n__title{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.n__innerText{
+    position: absolute;
+    top: 23vh;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #00000011;
+    transform: rotate(10deg);
+    width: 100%;
+    font-size: calc(var(--base)*.78);
+}
+
+.n__img{
+    width: calc(var(--base)*2.9);
+    position: absolute;
+    top: calc(var(--base)*-.5);
+    left: calc(var(--base)*-.5);
+    filter: drop-shadow(10px 30px 3px #00000033);
+    transform: translate(calc(var(--base)*.5),20px,20px) ;
+    animation: 5s floated ease-in-out infinite;
+}
+
+
+/* Card Down */
+.n__shop{
+    height: 45%;
+    width: 100%;
+    padding: 3%;
+    border-radius: 0 0 2vh 2vh;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.n__shop-title{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.n__shop-about{
+    opacity: .8;
+}
+
+.n__shop-size{
+    position: relative;
+    padding-top: 5%;
+}
+
+select{
+    position: relative;
+    text-align: center;
+    appearance: none;
+	width: 50%;
+    margin-left: 20px;
+	cursor: pointer;
+  	padding: 0 10px;
+  	height: 25px;
+  	outline: none; 
+  	border: none;
+	border-radius: 0;
+	font-size: 1em;
+	color: var(--base-color);
+    border-radius: 5px;
+}
+ 
+select:focus {
+    outline: none;
+    color: var(--base-color);
+}
+.n__shop-color{
+    padding: 10px 0 0 0;
+}
+
+.n__shop-color label{
+    margin-right: 15px;
+}
+
+
+@keyframes floated {
+    0%,100%{
+        transform: translate(calc(var(--base)*.5),5px) rotateZ(12deg) ;
+    }
+    60%{
+        transform: translate(calc(var(--base)*.5),-5px) rotateZ(12deg) ;
+    }
+}
+
+
+
+input[type='radio']{
+    width: 0;
+    margin-right: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type='radio']::after {
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+#red::after{
+    background-color: red;
+}
+#red:checked::after{
+    outline: 3px solid red;
+}
+#blue::after{
+    background-color: blue;
+}
+#blue:checked::after{
+    outline: 3px solid blue;
+}
+#black::after{
+    background-color: black;
+}
+#black:checked::after{
+    outline: 3px solid black;
+}
+
+:is(#red, #blue, #black):checked::after{
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--base-color);
+}
