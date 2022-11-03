@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <article class="n__">
+        <div class="lightBox">
+            <img class="lightBox__img" src=""></img>
+        </div>
+        <article class="n__">
         <div class="n__desing">
             <div class="n__logo"></div>
             <div class="n__title">Nike AIR Force I</div>
@@ -19,7 +22,7 @@
             <div class="n__shop-title">Nike Air Force 1 '07</div>
             <div class="n__shop-about">Zapatillas - Hombre</div>
             <div class="n__shop-size">
-                <label for="cars">Size </label>
+                <label for="cars">Talla </label>
                 <select name="cars" id="cars">
                   <option value="36">36</option>
                   <option value="37">37</option>
@@ -36,14 +39,16 @@
             <div class="n__shop-color">
                 <label for="color">Color</label>
                     <input type="radio" name="color" id="red">
-                    <input type="radio" name="color" id="blue">
+                    <input type="radio" name="color" checked id="blue">
                     <input type="radio" name="color" id="black">
             </div>
+            <div class="n__shop-price">250.000</div>
             <div class="n__shop-action">
                 <button>comprar</button>
-                <button><img src="shopcard.svg" alt="" srcset=""></button>
+                <button></button>
             </div>
         </div>
+        <script src='anime.js' ></script>
     </article>
 
 
