@@ -218,10 +218,19 @@ select:focus {
 }
 
 input[type='radio']{
-    width: 0;
+    width: 1.2rem;
+	height: 1rem;
+	accent-color: black;
     margin-right: 30px;
     position: relative;
     cursor: pointer;
+}
+
+input[type='radio']:nth-of-type(1){	
+	accent-color: red;
+}
+input[type='radio']:nth-of-type(2){	
+	accent-color: blue;
 }
 
 input[type='radio']::after {
